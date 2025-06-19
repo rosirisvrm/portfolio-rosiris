@@ -1,0 +1,37 @@
+---
+import TopArrowIcon from '../components/icons/TopArrowIcon.astro';
+---
+<button
+    id="scrollToTopBtn"
+    class="fixed bottom-6 right-6 bg-green-color hover:opacity-95 cursor-pointer
+    text-white p-4 rounded-full shadow-lg z-50 hover:scale-110 transition duration-300 transform
+    opacity-0 pointer-events-none"
+    aria-label="Scroll to top"
+>
+
+    <TopArrowIcon />
+</button>
+
+<script>
+  const scrollBtn = document.getElementById('scrollToTopBtn');
+
+  if(scrollBtn){
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const screenHeight = window.innerHeight;
+
+        if (scrollY > screenHeight * 1) {
+        scrollBtn.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+        scrollBtn.classList.add('opacity-0', 'pointer-events-none');
+        }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });
+    });
+  }
+</script>

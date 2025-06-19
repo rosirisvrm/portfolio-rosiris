@@ -1,0 +1,21 @@
+---
+interface Props{
+    icon?: string
+    title?: string
+    description?: string
+}
+---
+
+<!-- To set the column width in a different way  xl:w-1/5 w-full  -->
+
+<div class="
+    flex-1
+    rounded-xl bg-green-color 
+    pr-5 pb-5 pl-5 pt-10 
+    flex flex-col
+    hover:scale-105 transition
+">
+    <img src="../../public/ion_rocket-outline.png" class="size-8 mb-3" />
+    <h6 class="uppercase text-white font-bold text-lg mb-1">{Astro.props.title || ''}</h6>
+    <p class="text-white text-md">{Astro.props.description || ''}</p>
+</div>

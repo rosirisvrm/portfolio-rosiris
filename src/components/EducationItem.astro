@@ -1,0 +1,43 @@
+---
+import CapIcon from './icons/CapIcon.astro'
+import type { Education } from '../data'
+
+type Props = {
+    item: Education,
+}
+
+---
+
+<div class="flex flex-col md:flex-row gap-x-4 border border-green rounded-xl p-4 md:py-3 hover:scale-105 transition">
+
+    <div class="flex flex-col w-full md:w-1/5 justify-center items-center mb-4 md:mb-0">
+         <CapIcon class='size-10' />
+    </div>
+
+    <div class="flex flex-col md:flex-row w-full md:w-4/5">
+        <div class="flex flex-col justify-center items-center md:items-start w-full md:w-1/2 mb-4 md:mb-0">
+            <h5 class="font-bold">
+                {Astro.props.item.degree}
+            </h5>
+            <h6 class="text-center md:text-start italic">
+                {Astro.props.item.institute}
+            </h6>
+        </div>
+
+        <div class="flex flex-col justify-center items-center md:items-end text-gray-400 text-sm font-normal leading-none w-full md:w-1/2">
+            <time>
+                {Astro.props.item.time}
+            </time>
+            <span>
+                {`${Astro.props.item.city}, ${Astro.props.item.country}`}
+            </span>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .border-green{
+        border-color: #5A924E;
+    }
+</style>

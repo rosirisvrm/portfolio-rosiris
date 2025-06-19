@@ -1,3 +1,8 @@
+---
+import '../styles/global.css';
+import '@fontsource-variable/dm-sans';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,18 +10,36 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Rosiris Romero | Frontend Developer</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style is:global>
+ 	:root{
+		color-scheme: light dark;
+ 	}
+
+	html {
+		font-family: 'DM Sans Variable', sans-serif;
+		scroll-behavior: smooth;
 	}
+
+	body {
+		background-color: #000;
+	}
+
+	.section-bg{
+		background-color: #131313;
+	}
+	.bg-green-color{
+		background-color: #5A924E
+	}
+	.green-color{
+		color: #5A924E
+	}
+
+
 </style>

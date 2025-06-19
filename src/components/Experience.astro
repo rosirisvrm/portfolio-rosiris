@@ -1,0 +1,67 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+---
+
+<section id="experience" class="section-bg py-24 px-10 lg:px-32 flex flex-wrap w-full">
+    <div class="md:mx-10 w-full flex flex-col">
+
+        <h3 class="text-xl font-bold mb-20">| Experiencia</h3>
+        
+        <ol class="relative border-s border-gray-200 dark:border-gray-500">
+            <ExperienceItem 
+                time="04/2025 - 05/2025"
+                role="Frontend Mobile Developer"
+                company="Freelance"
+                type="Remoto"
+                description=`I developed interfaces for a mobile application using React Native, meticulously following the UX/UI design in Figma and consuming a REST API to ensure the proper rendering of data in the application.`
+            />
+            <ExperienceItem 
+                time="12/2023 – 12/2024"
+                role="Frontend Developer"
+                company="Nolatech"
+                type="Remoto"
+                description="I participated in the development of an ongoing web chat platform made in React.js adding new features.- I led the frontend development of an administrative and tracking web application using Next.js and connecting a GraphQL API.- I collaborated in the design and development of a bug tracking application (Next.js)."
+            />
+            <ExperienceItem 
+                time="12/2022 – 03/2023"
+                role="Frontend Developer"
+                company="Portl"
+                type="Remoto"
+                description=`
+                • Implemented UI/UX improvements in a web platform for content creators in production, developed with Next.js.
+                • I increased the scope of the application by developing new features and interfaces.
+                • I optimized the project's code by fixing bugs and performing refactoring.`
+            />
+            <ExperienceItem 
+                time="02/2021 – 01/2022"
+                role="Frontend Developer"
+                company="Smartbunny"
+                type="Remoto"
+                description=`
+                • I participated in the expansion of an ongoing web project creating new interfaces with React.js.
+                • I contributed in the development of the web version of a social network with Next.js, making the UI and integrating serverless connections.
+                • I collaborated in the construction of an administrative system in Angular developing the UI and integrating a REST API.
+                • I developed landing pages and websites using HTML, CSS and Bootstrap.`
+            />
+            <ExperienceItem 
+                time="01/2019 – 01/2021"
+                role="Junior Developer"
+                company="LCC Opentech"
+                type="Hybrid"
+                description=`
+                I cooperated in the development of a web application with React.js for industrial process control performing the following tasks: 
+                • I built the UI following designs.
+                • I integrated a REST API to consume and manage data.
+                • I connected data in real time.`
+            />
+        </ol>
+
+    </div>
+</section>
+
+<style>
+    .light-green-color{
+        color: #84ad7bff;
+    }
+
+</style>

@@ -1,0 +1,17 @@
+---
+interface Props{
+    href?: string
+    class?: string
+}
+---
+
+<a 
+    href={Astro.props.href || null} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class={`flex gap-x-2 justify-center items-center bg-withe/5 hover:bg-white/10 py-2 px-4 
+        rounded-full border border-white/10 hover:scale-105 transition sm:text-sm text-xs
+        ${Astro.props.href && 'cursor-pointer'} ${Astro.props.class || ''}`}
+>
+    <slot />
+</a>

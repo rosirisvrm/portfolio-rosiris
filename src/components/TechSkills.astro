@@ -1,0 +1,20 @@
+---
+import TechSkillItem from './TechSkillItem.astro';
+import { technologies } from '../data';
+---
+
+<section id="techSkills" class="py-24 px-10 lg:px-32 flex flex-wrap w-full">
+    <div class="md:mx-10 w-full flex flex-col">
+
+        <h3 class="text-xl font-bold mb-20">| Habilidades técnicas</h3>
+
+        <div class="flex flex-row gap-3 flex-wrap justify-center">
+            {technologies.map(({ name, icon: Icon }) => (
+                <TechSkillItem>
+                    <Icon class='sm:size-4 size-3' />
+                    {name}
+                </TechSkillItem>
+            ))}
+        </div>
+    </div>
+</section>

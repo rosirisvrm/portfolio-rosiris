@@ -1,0 +1,37 @@
+---
+import type { Project } from "../data"
+import ActionButton from "./ActionButton.astro"
+import SearchIcon from "./icons/SearchIcon.astro"
+
+interface Props{
+    project: Project;
+}
+
+const { project: { id, title, resume, imgUrl } } = Astro.props;
+
+---
+
+<div class="flex flex-col project-card-bg 
+    p-5 rounded-2xl gap-y-3 mb-4 
+    xl:w-[360px] lg:w-[330px] md:w-[290px] w-[300px] 
+">
+    <img src={`../../public/${imgUrl}.png`} class="w-full h-32 md:h-48 rounded-xl" />
+    <h5 class="capitalize font-bold text-lg">
+        {title}
+    </h5>
+    <p class="mb-5 text-sm">
+        {resume}
+    </p>
+    <div class="flex mx-auto">
+        <ActionButton href={`/project/${id}`}>
+            <SearchIcon class="sm:size-4 size-3" />
+            Ver detalles
+        </ActionButton>
+    </div>
+</div>
+
+<style>
+    .project-card-bg{
+        background-color: #27302E;
+    }
+</style>
