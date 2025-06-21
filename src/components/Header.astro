@@ -1,10 +1,48 @@
-<header class="flex justify-center items-center px-10 lg:px-32 py-5 w-full">
-    <nav class="sm:flex flex-row justify-center items-center sm:gap-x-10 grid gap-y-2 sm:gap-y-0 text-center">
-        <a class="opacity-80 hover:opacity-100" href="#home">Home</a>
-        <a class="opacity-80 hover:opacity-100" href="#about">Sobre mí</a>
-        <a class="opacity-80 hover:opacity-100" href="#experience">Experiencia</a>
-        <a class="opacity-80 hover:opacity-100" href="#education">Educación</a>
-        <a class="opacity-80 hover:opacity-100" href="#mainSkills">Habilidades</a>
-        <a class="opacity-80 hover:opacity-100" href="#projects">Proyectos</a>
+---
+import { sections } from "../data";
+import BurguerMenuIcon from './icons/BurguerMenuIcon.astro';
+---
+
+<header class="flex justify-end sm:justify-center items-center px-10 lg:px-32 py-5 w-full">
+    <nav class="
+        hidden
+        sm:flex flex-row justify-center items-center 
+        sm:gap-x-10 gap-y-2 sm:gap-y-0 text-center
+    ">
+        {sections.map((sec) => (
+            <a class="opacity-80 hover:opacity-100" href={sec.href}>{sec.title}</a>
+        ))}
     </nav>
+
+    <button id="menu-toggle" class="sm:hidden">
+        <BurguerMenuIcon class="size-6" />
+    </button>
 </header>
+
+<div id="mobile-menu" class="hidden md:hidden bg-transparent w-full min-h-screen z-50 absolute">
+    <div class="
+        flex-col p-4 bg-black w-3/4 min-h-screen absolute right-0
+        transition-all duration-300 ease-in-out
+    ">
+        <nav class="flex flex-col gap-4 p-4 text-white">
+            {sections.map((sec) => (
+                <a class="opacity-80" href={sec.href}>{sec.title}</a>
+            ))}
+        </nav>
+    </div>
+</div>
+
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if(toggleButton && mobileMenu){
+    toggleButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    })
+  }
+</script>
