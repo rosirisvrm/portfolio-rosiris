@@ -19,6 +19,32 @@ import RestApiIcon from './components/icons/RestApiIcon.astro';
 import TestingLibraryIcon from './components/icons/TestingLibraryIcon.astro';
 import HookFormIcon from './components/icons/HookFormIcon.astro';
 import ScrumIcon from './components/icons/ScrumIcon.astro';
+import ResponsiveIcon from "./components/icons/ResponsiveIcon.astro";
+import WebsiteIcon from "./components/icons/WebsiteIcon.astro";
+import CodeIcon from './components/icons/CodeIcon.astro';
+import ApiIcon from "./components/icons/ApiIcon.astro";
+
+export type Section = {
+  id: string;
+  title: string;
+  href: string;
+}
+
+export type Experience = {
+    id: number,
+    time: string,
+    role: string,
+    company: string,
+    type: string,
+    description: string,
+}
+
+export type MainSkill = {
+  id: string,
+  icon: any,
+  title: string,
+  description: string,
+}
 
 export type Project = {
     id: string;
@@ -46,6 +72,82 @@ export type Technology = {
     icon: any;
 }
 
+export const sections: Section[] = [
+  {
+    id: "home",
+    title: "Home",
+    href: "#home"
+  },
+  {
+    id: "about",
+    title: "Sobre mí",
+    href: "#about"
+  },
+  {
+    id: "experience",
+    title: "Experiencia",
+    href: "#experience"
+  },
+  {
+    id: "education",
+    title: "Educación",
+    href: "#education"
+  },
+  {
+    id: "mainSkills",
+    title: "Habilidades",
+    href: "#mainSkills"
+  },
+  {
+    id: "projects",
+    title: "Proyectos",
+    href: "#projects"
+  }
+]
+
+export const experience: Experience[] = [
+  {
+    id: 0,
+    time: "04/2025 - 05/2025",
+    role: "Frontend Mobile Developer",
+    company: "Freelance",
+    type: "Remoto",
+    description: "I developed interfaces for a mobile application using React Native, meticulously following the UX/UI design in Figma and consuming a REST API to ensure the proper rendering of data in the application."
+  },
+  {
+    id: 1,
+    time: "12/2023 – 12/2024",
+    role: "Frontend Developer",
+    company: "Nolatech",
+    type: "Remoto",
+    description: "I participated in the development of an ongoing web chat platform made in React.js adding new features. I led the frontend development of an administrative and tracking web application using Next.js and connecting a GraphQL API. I collaborated in the design and development of a bug tracking application (Next.js)."
+  },
+  {
+    id: 2,
+    time: "12/2022 – 03/2023",
+    role: "Frontend Developer",
+    company: "Portl",
+    type: "Remoto",
+    description: "Implemented UI/UX improvements in a web platform for content creators in production, developed with Next.js. I increased the scope of the application by developing new features and interfaces. I optimized the project's code by fixing bugs and performing refactoring."
+  },
+  {
+    id: 3,
+    time: "02/2021 – 01/2022",
+    role: "Frontend Developer",
+    company: "Smartbunny",
+    type: "Remoto",
+    description: "I participated in the expansion of an ongoing web project creating new interfaces with React.js. I contributed in the development of the web version of a social network with Next.js, making the UI and integrating serverless connections. I collaborated in the construction of an administrative system in Angular developing the UI and integrating a REST API. I developed landing pages and websites using HTML, CSS and Bootstrap."
+  },
+  {
+    id: 4,
+    time: "01/2019 – 01/2021",
+    role: "Junior Developer",
+    company: "LCC Opentech",
+    type: "Hybrid",
+    description: "I cooperated in the development of a web application with React.js for industrial process control performing the following tasks: I built the UI following designs. I integrated a REST API to consume and manage data. I connected data in real time."
+  }
+]
+
 export const education: Education[] = [
     {
         id: 'computer-engineering',
@@ -56,6 +158,33 @@ export const education: Education[] = [
         country: 'Venezuela',
     }
 ];
+
+export const mainSkills: MainSkill[] = [
+  {
+    id: "webApps",
+    icon: CodeIcon,
+    title: "Desarrollo de aplicaciones web",
+    description: "Diseño y desarrollo de interfaces dinámicas y escalables utilizando frameworks modernos como React y Next.js, con enfoque en rendimiento, accesibilidad y experiencia de usuario."
+  },
+  {
+    id: "staticSites",
+    icon: WebsiteIcon,
+    title: "Desarrollo de sitios web estáticos",
+    description: "Construcción de sitios rápidos y optimizados para SEO con tecnologías como Astro y HTML/CSS, priorizando tiempos de carga bajos y una estructura fácilmente mantenible."
+  },
+  {
+    id: "responsiveDesign",
+    icon: ResponsiveIcon,
+    title: "Desarrollo responsive",
+    description: "Implementación de diseños adaptables que aseguran una experiencia fluida en dispositivos móviles, tablets y escritorios usando Tailwind CSS y técnicas modernas de layout."
+  },
+  {
+    id: "apiConsumption",
+    icon: ApiIcon,
+    title: "Consumo de APIs",
+    description: "Integración eficiente de APIs REST y GraphQL para conectar interfaces con datos en tiempo real, aplicando buenas prácticas de manejo de estado y asincronía."
+  }
+]
 
 export const technologies = [
   { id: "html", name: "HTML", icon: HtmlIcon },
@@ -91,7 +220,7 @@ export const projects: Project[] = [
         imgUrl: 'project_0',
         repoUrl: 'https://github.com/rosirisvrm/condominium-administrator',
         demoUrl: 'https://rosirisvrm.github.io/condominium-administrator/#/dashboard/home',
-        technologies: ['react', 'redux', 'materialUi', 'reactHookForm', 'reactRouter'],
+        technologies: ['reactJs', 'redux', 'materialUi', 'reactHookForm', 'reactRouter'],
     },
     {
         id: 'todo-machine',
@@ -101,7 +230,7 @@ export const projects: Project[] = [
         imgUrl: 'project_1',
         repoUrl: 'https://github.com/rosirisvrm/todo-machine',
         demoUrl: 'https://rosirisvrm.github.io/todo-machine/',
-        technologies: ['react', 'css', 'contextApi', 'reactHooks', 'reactRouter', 'customHooks', 'localStorage']
+        technologies: ['reactJs', 'css', 'contextApi', 'reactHooks', 'reactRouter', 'customHooks', 'localStorage']
     },
     {
         id: 'uw-landing-page',
@@ -111,7 +240,7 @@ export const projects: Project[] = [
         imgUrl: 'project_2',
         repoUrl: 'https://github.com/rosirisvrm/unitewellness-landing',
         demoUrl: 'https://rosirisvrm.github.io/unitewellness-landing/',
-        technologies: ['react', 'materialUi']
+        technologies: ['reactJs', 'materialUi']
     },
     {
         id: 'company-landing-page',
@@ -121,7 +250,7 @@ export const projects: Project[] = [
         imgUrl: 'project_3',
         repoUrl: 'https://github.com/rosirisvrm/company-landing-page',
         demoUrl: 'https://rosirisvrm-company-landing-page.netlify.app/',
-        technologies: ['react', 'next', 'materialUi']
+        technologies: ['reactJs', 'nextJs', 'materialUi']
     },
     {
         id: 'condominium-administrator-landing-Page',
@@ -131,7 +260,7 @@ export const projects: Project[] = [
         imgUrl: 'project_4',
         repoUrl: 'https://github.com/rosirisvrm/ca-landing-page',
         demoUrl: 'https://ca-lading-page.netlify.app/',
-        technologies: ['html', 'css', 'js', 'bootstrap']
+        technologies: ['html', 'css', 'javaScript', 'bootstrap']
     },
     {
         id: 'english-academy-landing-page',
@@ -141,6 +270,6 @@ export const projects: Project[] = [
         imgUrl: 'project_5',
         repoUrl: 'https://github.com/rosirisvrm/english-academy-landing-page',
         demoUrl: 'https://english-academy-landing-page.netlify.app/',
-        technologies: ['html', 'css', 'js', 'sass', 'bootstrap', 'twig', 'gulp']
+        technologies: ['html', 'css', 'javaScript', 'sass', 'bootstrap', 'twig', 'gulp']
     },
 ];
