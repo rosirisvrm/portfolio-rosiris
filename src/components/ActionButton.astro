@@ -7,16 +7,10 @@ interface Props{
 ---
 <a href={Astro.props.href} target={Astro.props.target || null}
    class={`${Astro.props.class || 'w-48'}
-    button-bg sm:py-3 sm:px-8 py-2.5 px-4
+    bg-primary sm:py-3 sm:px-8 py-2.5 px-4
     text-white text-xs font-normal sm:text-sm sm:font-medium
     rounded-md cursor-pointer hover:scale-105 transition gap-x-1
     flex items-center flex-row justify-center
 `}>
 	<slot />
 </a>
-
-<style>
-  .button-bg{
-		background-color: #5A924E;
-	}
-</style>

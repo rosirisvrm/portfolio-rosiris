@@ -1,5 +1,4 @@
 ---
-// import UserIcon from '../components/icons/UserIcon.astro';
 import GithubIcon from './icons/GithubIcon.astro';
 import LinkedinIcon from './icons/LinkedinIcon.astro';
 import MailIcon from './icons/MailIcon.astro';
@@ -10,17 +9,20 @@ import CvIcon from './icons/CvIcon.astro';
 ---
 
 <section id="home" class="
-	section-bg px-10 lg:px-32 w-full 
+	bg-primary-900 px-10 lg:px-32 w-full 
 	lg:h-[720px] 
 	xl:h-[670px] 
 	sm:flex block sm:flex-row sm:items-center sm:overflow-y-hidden sm:overflow-x-hidden">
 	
 	<div class="w-full sm:w-1/2 flex flex-col md:ml-10 py-10">
 
-		<h4 class="text-white text-sm md:text-lg font-light mb-3">
-			Hola, mi nombre es
-		</h4>
-		<h1 class="name-color text-4xl md:text-6xl font-extrabold mb-2">
+		<div class="flex flex-row items-center">
+			<h4 class="text-white text-sm md:text-lg font-light mb-3">
+				Hola, mi nombre es
+			</h4>
+		</div>
+		
+		<h1 class="title-gradient text-4xl md:text-6xl font-extrabold mb-2">
 			Rosiris Romero
 		</h1>
 		<h2 class="text-lg sm:text-2xl md:font-normal font-semibold mb-2">
@@ -58,7 +60,7 @@ import CvIcon from './icons/CvIcon.astro';
 		xl:h-[720px] 
 		flex justify-center items-center pb-6 sm:pb-0">
 		<div class="
-			img-container 
+			bg-primary-800 
 			xl:size-96
 			lg:size-80 
 			size-60
@@ -80,24 +82,11 @@ import CvIcon from './icons/CvIcon.astro';
 </section>
 
 <style>
-	.name-color{
+	.title-gradient{
 		background: linear-gradient(to right, #5A924E, #B1CBAB);
   		-webkit-background-clip: text;
   		color: transparent;  
 	}
-
-	.button-bg{
-		background-color: #5A924E;
-	}
-
-	.img-container{
-		background-color: #27302E;
-	}
-
-	.img-inner-container{
-		background-color: #252e2dff;
-	}
-
 	.bg-gradient{
 		background: linear-gradient(to right, #5A924E, #B1CBAB);
 	}

@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+/* Configuración de tema para Tailwind v4 */
+@theme {
+   /* Colores de marca (se usan en ambos temas) */
+
+   /* Primary */
+  --color-primary: #5A924E;
+  --color-primary-800: #27302E; 
+  --color-primary-900: #131313;
+  
+
+  /* Secondary */
+  --color-secondary-100: #FFF0F5;
+  --color-secondary-200: #FFE4E1;
+  --color-secondary-300: #FFC0CB;
+  --color-secondary-400: #DB7093;
+  --color-secondary-500: #C71585;
+  --color-secondary-600: #4A5568;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: oklch(0.11 0.017 240.5);
+    --color-text: oklch(0.94 0.013 240.4);
+  }
+}

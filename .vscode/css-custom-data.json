@@ -1,0 +1,62 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Define theme configuration for Tailwind CSS v4",
+      "references": [
+        {
+          "name": "Tailwind CSS v4 Documentation",
+          "url": "https://tailwindcss.com/docs/v4-beta"
+        }
+      ]
+    },
+    {
+      "name": "@config",
+      "description": "Configuration directive for Tailwind CSS v4 (deprecated, use @theme instead)",
+      "references": [
+        {
+          "name": "Tailwind CSS v4 Documentation", 
+          "url": "https://tailwindcss.com/docs/v4-beta"
+        }
+      ]
+    },
+    {
+      "name": "@source",
+      "description": "Define source paths for Tailwind CSS v4",
+      "references": [
+        {
+          "name": "Tailwind CSS v4 Documentation",
+          "url": "https://tailwindcss.com/docs/v4-beta"
+        }
+      ]
+    },
+    {
+      "name": "@import",
+      "description": "Import Tailwind CSS or other stylesheets"
+    },
+    {
+      "name": "@layer",
+      "description": "Assign styles to a Tailwind layer"
+    },
+    {
+      "name": "@apply",
+      "description": "Apply Tailwind utility classes"
+    },
+    {
+      "name": "@responsive",
+      "description": "Generate responsive variants"
+    },
+    {
+      "name": "@screen",
+      "description": "Create media queries using Tailwind breakpoints"
+    },
+    {
+      "name": "@variants",
+      "description": "Generate variant styles"
+    }
+  ],
+  "properties": [],
+  "pseudoClasses": [],
+  "pseudoElements": []
+}

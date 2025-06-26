@@ -1,0 +1,48 @@
+---
+import KiwiIcon from "./icons/KiwiIcon.astro";
+import StrawberryIcon from './icons/StrawberryIcon.astro';
+import ButtonIcon from './ButtonIcon.astro';
+---
+
+<div class="flex flex-row items-center ms-3 gap-x-1 lg:gap-x-2">
+    <ButtonIcon>
+        <span class="text-white font-bold">ES</span>
+    </ButtonIcon>
+
+    <ButtonIcon id="dark-mode-toggle" aria-label="Toggle dark mode">
+        <StrawberryIcon class="size-5 text-secondary-400 hidden dark:block" />
+        <KiwiIcon class="size-5 text-primary block dark:hidden" />
+    </ButtonIcon>
+</div>
+
+<script>
+  // Función para hacer toggle del dark mode
+  function toggleDarkMode() {
+    const html = document.documentElement;
+    const isDark = html.classList.contains('dark');
+    
+    if (isDark) {
+      html.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+
+  // Agregar event listener al botón
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('dark-mode-toggle');
+    if (button) {
+      button.addEventListener('click', toggleDarkMode);
+    }
+  });
+
+  // Para navegación del lado del cliente (View Transitions)
+  document.addEventListener('astro:page-load', () => {
+    const button = document.getElementById('dark-mode-toggle');
+    if (button) {
+      button.addEventListener('click', toggleDarkMode);
+    }
+  });
+</script>

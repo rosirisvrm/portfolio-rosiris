@@ -14,6 +14,22 @@ import '@fontsource-variable/dm-sans';
 	</head>
 	<body>
 		<slot />
+
+		<!-- Script para inicializar dark mode -->
+    	<script>
+			// Función para inicializar dark mode
+			function initializeDarkMode() {
+				const savedTheme = localStorage.getItem('theme');
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				
+				if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+					document.documentElement.classList.add('dark');
+				}
+			}
+
+			// Ejecutar inmediatamente para evitar flash
+			initializeDarkMode();
+    </script>
 	</body>
 </html>
 
@@ -25,46 +41,4 @@ import '@fontsource-variable/dm-sans';
 		font-family: 'DM Sans Variable', sans-serif;
 		scroll-behavior: smooth;
 	}
-	body {
-		background-color: #000;
-	}
-	.section-bg{
-		background-color: #131313;
-	}
-	.bg-green-color{
-		background-color: #5A924E
-	}
-	.green-color{
-		color: #5A924E
-	}
-	.project-card-bg{
-        background-color: #27302E;
-    }
-
-	/* Light theme */
-
-	/* body {
-      background-color: #FFF0F5;
-	}
-    .custom-pink {
-      background-color: #FFC0CB;
-	}
-    .custom-pink-light {
-      background-color: #FFE4E1;
-	} */
-    /* .custom-pink-dark {
-      background-color: #DB7093;
-	} */
-    .custom-text-pink {
-      color: #DB7093;
-	}
-    .custom-text-dark-pink {
-      color: #C71585;
-	}
-    /* .custom-text-gray {
-        color: #4A5568;
-	}
-    .custom-border-pink {
-        border-color: #DB7093;
-    } */
 </style>

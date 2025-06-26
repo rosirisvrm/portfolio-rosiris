@@ -1,12 +1,10 @@
 ---
 import { sections } from "../data";
 import BurguerMenuIcon from './icons/BurguerMenuIcon.astro';
-import KiwiIcon from "./icons/KiwiIcon.astro";
-import StrawberryIcon from './icons/StrawberryIcon.astro';
-import ButtonIcon from './ButtonIcon.astro';
+import DarkModeButton from "./DarkModeButton.astro";
 ---
 
-<header class="flex justify-between sm:justify-center items-center px-10 lg:px-32 py-5 w-full">
+<header class="bg-black flex justify-between sm:justify-center items-center px-10 lg:px-32 py-5 w-full">
     <nav class="
         hidden
         sm:flex flex-row justify-center items-center 
@@ -21,16 +19,7 @@ import ButtonIcon from './ButtonIcon.astro';
         <BurguerMenuIcon class="size-6" />
     </button>
 
-    <div class="flex flex-row items-center ms-3 gap-x-1">
-        <ButtonIcon>
-            <span class="text-white font-bold">ES</span>
-        </ButtonIcon>
-
-        <ButtonIcon>
-            <StrawberryIcon class="size-5 custom-text-pink" />
-            <!-- <KiwiIcon class="size-5" /> -->
-        </ButtonIcon>
-    </div>
+    <DarkModeButton />
 </header>
 
 <!-- Mobile Menu -->
