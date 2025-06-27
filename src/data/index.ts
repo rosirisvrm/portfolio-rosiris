@@ -1,76 +1,29 @@
-import ReactIcon from './components/icons/ReactIcon.astro';
-import ReactRouterIcon from './components/icons/ReactRouterIcon.astro';
-import HtmlIcon from './components/icons/HtmlIcon.astro';
-import CssIcon from './components/icons/CssIcon.astro';
-import JavaScriptIcon from './components/icons/JavaScriptIcon.astro';
-import TypeScriptIcon from './components/icons/TypeScriptIcon.astro';
-import NextIcon from './components/icons/NextIcon.astro';
-import ReduxIcon from './components/icons/ReduxIcon.astro';
-import MaterialUiIcon from './components/icons/MaterialUiIcon.astro';
-import BootstrapIcon from './components/icons/BootstrapIcon.astro';
-import TailwindCssIcon from './components/icons/TailwindCssIcon.astro';
-import SassIcon from './components/icons/SassIcon.astro';
-import GraphQLIcon from './components/icons/GraphQLIcon.astro';
-import AngularIcon from './components/icons/AngularIcon.astro';
-import VueIcon from './components/icons/VueIcon.astro';
-import AstroIcon from './components/icons/AstroIcon.astro';
-import GitIcon from './components/icons/GitIcon.astro';
-import RestApiIcon from './components/icons/RestApiIcon.astro';
-import TestingLibraryIcon from './components/icons/TestingLibraryIcon.astro';
-import HookFormIcon from './components/icons/HookFormIcon.astro';
-import ScrumIcon from './components/icons/ScrumIcon.astro';
-import ResponsiveIcon from "./components/icons/ResponsiveIcon.astro";
-import WebsiteIcon from "./components/icons/WebsiteIcon.astro";
-import CodeIcon from './components/icons/CodeIcon.astro';
-import ApiIcon from "./components/icons/ApiIcon.astro";
-
-export type Section = {
-  id: string;
-  title: string;
-  href: string;
-}
-
-export type Experience = {
-    id: number,
-    time: string,
-    role: string,
-    company: string,
-    type: string,
-    description: string,
-}
-
-export type MainSkill = {
-  id: string,
-  icon: any,
-  title: string,
-  description: string,
-}
-
-export type Project = {
-    id: string;
-    title: string;
-    resume: string;
-    description: string;
-    imgUrl?: string;
-    repoUrl: string;
-    demoUrl: string;
-    technologies: string[] | [];
-};
-
-export type Education = {
-    id: string;
-    time: string;
-    degree: string;
-    institute: string,
-    city: string,
-    country: string,
-}
-
-export type Technology = {
-    id: string;
-    name: string;
-    icon: any;
-}
+import ReactIcon from '@/components/icons/ReactIcon.astro';
+import ReactRouterIcon from '@/components/icons/ReactRouterIcon.astro';
+import HtmlIcon from '@/components/icons/HtmlIcon.astro';
+import CssIcon from '@/components/icons/CssIcon.astro';
+import JavaScriptIcon from '@/components/icons/JavaScriptIcon.astro';
+import TypeScriptIcon from '@/components/icons/TypeScriptIcon.astro';
+import NextIcon from '@/components/icons/NextIcon.astro';
+import ReduxIcon from '@/components/icons/ReduxIcon.astro';
+import MaterialUiIcon from '@/components/icons/MaterialUiIcon.astro';
+import BootstrapIcon from '@/components/icons/BootstrapIcon.astro';
+import TailwindCssIcon from '@/components/icons/TailwindCssIcon.astro';
+import SassIcon from '@/components/icons/SassIcon.astro';
+import GraphQLIcon from '@/components/icons/GraphQLIcon.astro';
+import AngularIcon from '@/components/icons/AngularIcon.astro';
+import VueIcon from '@/components/icons/VueIcon.astro';
+import AstroIcon from '@/components/icons/AstroIcon.astro';
+import GitIcon from '@/components/icons/GitIcon.astro';
+import RestApiIcon from '@/components/icons/RestApiIcon.astro';
+import TestingLibraryIcon from '@/components/icons/TestingLibraryIcon.astro';
+import HookFormIcon from '@/components/icons/HookFormIcon.astro';
+import ScrumIcon from '@/components/icons/ScrumIcon.astro';
+import ResponsiveIcon from "@/components/icons/ResponsiveIcon.astro";
+import WebsiteIcon from "@/components/icons/WebsiteIcon.astro";
+import CodeIcon from '@/components/icons/CodeIcon.astro';
+import ApiIcon from "@/components/icons/ApiIcon.astro";
+import type { Section, Experience, Education, MainSkill, Technology, Project } from '@/types';
 
 export const sections: Section[] = [
   {
@@ -186,7 +139,7 @@ export const mainSkills: MainSkill[] = [
   }
 ]
 
-export const technologies = [
+export const technologies: Technology[] = [
   { id: "html", name: "HTML", icon: HtmlIcon },
   { id: "css", name: "CSS", icon: CssIcon },
   { id: "javaScript", name: "JavaScript", icon: JavaScriptIcon },
