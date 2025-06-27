@@ -9,26 +9,27 @@ import CvIcon from './icons/CvIcon.astro';
 ---
 
 <section id="home" class="
-	bg-primary-900 px-10 lg:px-32 w-full 
+	bg-section
+	px-10 lg:px-32 w-full 
 	lg:h-[720px] 
 	xl:h-[670px] 
-	sm:flex block sm:flex-row sm:items-center sm:overflow-y-hidden sm:overflow-x-hidden">
-	
+	sm:flex block sm:flex-row sm:items-center
+">
 	<div class="w-full sm:w-1/2 flex flex-col md:ml-10 py-10">
 
 		<div class="flex flex-row items-center">
-			<h4 class="text-white text-sm md:text-lg font-light mb-3">
+			<h4 class="text-black/60 dark:text-white text-sm md:text-lg font-light mb-3">
 				Hola, mi nombre es
 			</h4>
 		</div>
 		
-		<h1 class="title-gradient text-4xl md:text-6xl font-extrabold mb-2">
+		<h1 class="title-name text-4xl md:text-6xl font-extrabold mb-2">
 			Rosiris Romero
 		</h1>
-		<h2 class="text-lg sm:text-2xl md:font-normal font-semibold mb-2">
+		<h2 class="text-black/60 dark:text-white text-lg sm:text-2xl md:font-normal font-semibold mb-2">
 			Desarrolladora Frontend
 		</h2>
-		<h3 class="text-sm md:text-[16px] font-normal mb-5">
+		<h3 class="text-black/60 dark:text-white text-sm md:text-[16px] font-normal mb-5">
 			Especialista en crear aplicaciones web bonitas e interactivas.
 		</h3>
 
@@ -47,7 +48,7 @@ import CvIcon from './icons/CvIcon.astro';
 			</SocialMediaButton>
 		</nav>
 		
-		<ActionButton href='public/Rosiris-Romero-CV.pdf' target="_blank">
+		<ActionButton id="cv-button" target="_blank">
 			Descarga mi CV
 			<CvIcon class="sm:size-4 size-3" />
 		</ActionButton>
@@ -60,7 +61,7 @@ import CvIcon from './icons/CvIcon.astro';
 		xl:h-[720px] 
 		flex justify-center items-center pb-6 sm:pb-0">
 		<div class="
-			bg-primary-800 
+			bg-secondary-500 dark:bg-primary-800 
 			xl:size-96
 			lg:size-80 
 			size-60
@@ -74,20 +75,16 @@ import CvIcon from './icons/CvIcon.astro';
 				rounded-full flex justify-center items-center"
 			>
 				<div class="size-48 lg:size-72 rounded-full overflow-hidden relative">
-					<img src="/profile_pic.png" alt="" class="absolute" style="top: -35px" />
+					<img src="/pink_profile_pic.png" alt="Profile Pic" class="absolute block dark:hidden" style="top: -35px" />
+					<img src="/profile_pic.png" alt="Profile Pic" class="absolute hidden dark:block" style="top: -35px" />
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<style>
-	.title-gradient{
-		background: linear-gradient(to right, #5A924E, #B1CBAB);
-  		-webkit-background-clip: text;
-  		color: transparent;  
-	}
-	.bg-gradient{
-		background: linear-gradient(to right, #5A924E, #B1CBAB);
-	}
-</style>
+<script>
+  import { updateCvFile } from '../utils';
+
+  updateCvFile();
+</script>

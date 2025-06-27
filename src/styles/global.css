@@ -5,10 +5,10 @@
    /* Colores de marca (se usan en ambos temas) */
 
    /* Primary */
-  --color-primary: #5A924E;
+  --color-primary-300: #B1CBAB;
+  --color-primary-500: #5A924E;
   --color-primary-800: #27302E; 
   --color-primary-900: #131313;
-  
 
   /* Secondary */
   --color-secondary-100: #FFF0F5;
@@ -17,12 +17,67 @@
   --color-secondary-400: #DB7093;
   --color-secondary-500: #C71585;
   --color-secondary-600: #4A5568;
+
+  /* Gradient */
+  --color-gradient-start: #DB7093;
+  --color-gradient-end: #FFC0CB;
 }
 
-/* Dark mode */
+@variant dark (.dark &);
+
+
+
+/* Light mode por defecto */
+:root {
+  --color-bg: oklch(1 0 0);
+  --color-text: oklch(0.2 0 0);
+}
+
+/* Dark mode automático (respeta preferencia del sistema) */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: oklch(0.11 0.017 240.5);
     --color-text: oklch(0.94 0.013 240.4);
+  }
+}
+
+/* Dark mode manual (el toggle sobrescribe todo) */
+.dark {
+  --color-bg: oklch(0.11 0.017 240.5);
+  --color-text: oklch(0.94 0.013 240.4);
+
+  /* Gradient */
+  --color-gradient-start: #5A924E;
+  --color-gradient-end: #B1CBAB;
+}
+
+
+@layer utilities {
+  .title-name {
+    color: var(--color-secondary-500);
+  }
+
+  .dark .title-name {
+    background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient{
+		background: linear-gradient(to right, var(--color-gradient-start), var(--color-gradient-end));
+	}
+
+  .bg-section{
+     background-image: radial-gradient(60% 120% at 50% 50%,
+     hsla(0,0%,100%,0) 0,
+     rgba(252,205,238,.5) 100%);
+     background-color: var(--color-white);
+  }
+
+  /* Resetear en dark mode */
+  .dark .bg-section {
+    background-image: none;
+    background-color: var(--color-primary-900);
   }
 }

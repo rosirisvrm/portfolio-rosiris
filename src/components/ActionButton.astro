@@ -1,13 +1,20 @@
 ---
 interface Props{
+  id?: string;
   href?: string;
   target?: string; 
   class?: string;
+  download?: string;
 }
 ---
-<a href={Astro.props.href} target={Astro.props.target || null}
+<a 
+   {...Astro.props}
+   id={Astro.props.id}
+   href={Astro.props.href} 
+   target={Astro.props.target || null}
    class={`${Astro.props.class || 'w-48'}
-    bg-primary sm:py-3 sm:px-8 py-2.5 px-4
+    bg-pink-500 dark:bg-primary-500 
+    sm:py-3 sm:px-8 py-2.5 px-4
     text-white text-xs font-normal sm:text-sm sm:font-medium
     rounded-md cursor-pointer hover:scale-105 transition gap-x-1
     flex items-center flex-row justify-center

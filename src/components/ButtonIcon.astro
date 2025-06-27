@@ -1,19 +1,25 @@
 ---
 type Props = {
     id?: string;
+    ariaLabel?: string;
+    class?: string;
 }
 
 ---
 
 <button 
-    {...Astro.props} 
+    id={Astro.props.id}
+    aria-label={Astro.props.ariaLabel}
     type="button" 
-    class="
-      bg-gray-200 hover:bg-gray-300
-        dark:bg-withe/5 dark:hover:bg-white/10
-        border dark:border-white/10 border-gray-500
+    class={`${Astro.props.class || ''}
+        bg-transparent hover:bg-gray-50 
+        border-gray-100 hover:border-gray-200
+        focus:ring-2 focus:outline-none 
+        dark:bg-withe/5 dark:hover:bg-white/10 
+        dark:border-white/10
         hover:scale-105 transition
-        rounded-lg p-2 text-center inline-flex items-center cursor-pointer
-">
+        rounded-lg p-2 border text-center items-center cursor-pointer
+    `}
+>
     <slot />
 </button>

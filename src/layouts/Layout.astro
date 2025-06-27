@@ -11,25 +11,42 @@ import '@fontsource-variable/dm-sans';
 		<link rel="icon" type="image/svg+xml" href="/girl.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Rosiris Romero | Frontend Developer</title>
+		 <script is:inline>
+			(function() {	
+				function initializeDarkMode() {
+					const savedTheme = localStorage.getItem('theme');
+					const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+					
+					if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+						document.documentElement.classList.add('dark');
+						document.documentElement.setAttribute('data-theme', 'dark');
+					} else {
+						document.documentElement.classList.remove('dark');
+						document.documentElement.setAttribute('data-theme', 'light');
+					}
+				}
+				
+				// Ejecutar inmediatamente
+				initializeDarkMode();
+				
+				// También ejecutar cuando cambie la preferencia del sistema
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+					if (!localStorage.getItem('theme')) {
+					if (e.matches) {
+						document.documentElement.classList.add('dark');
+						document.documentElement.setAttribute('data-theme', 'dark');
+					} else {
+						document.documentElement.classList.remove('dark');
+						document.documentElement.setAttribute('data-theme', 'light');
+					}
+					}
+				});
+				
+			})();
+		</script>
 	</head>
 	<body>
 		<slot />
-
-		<!-- Script para inicializar dark mode -->
-    	<script>
-			// Función para inicializar dark mode
-			function initializeDarkMode() {
-				const savedTheme = localStorage.getItem('theme');
-				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-				
-				if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-					document.documentElement.classList.add('dark');
-				}
-			}
-
-			// Ejecutar inmediatamente para evitar flash
-			initializeDarkMode();
-    </script>
 	</body>
 </html>
 

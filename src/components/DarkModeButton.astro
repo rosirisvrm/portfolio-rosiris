@@ -4,18 +4,14 @@ import StrawberryIcon from './icons/StrawberryIcon.astro';
 import ButtonIcon from './ButtonIcon.astro';
 ---
 
-<div class="flex flex-row items-center ms-3 gap-x-1 lg:gap-x-2">
-    <ButtonIcon>
-        <span class="text-white font-bold">ES</span>
-    </ButtonIcon>
-
-    <ButtonIcon id="dark-mode-toggle" aria-label="Toggle dark mode">
-        <StrawberryIcon class="size-5 text-secondary-400 hidden dark:block" />
-        <KiwiIcon class="size-5 text-primary block dark:hidden" />
-    </ButtonIcon>
-</div>
+<ButtonIcon id="dark-mode-toggle" aria-label="Toggle dark mode" class="focus:ring-primary-300 dark:focus:ring-secondary-400">
+    <StrawberryIcon class="size-5 text-secondary-400 hidden dark:block" />
+    <KiwiIcon class="size-5 text-primary-500 block dark:hidden" />
+</ButtonIcon>
 
 <script>
+  import { updateCvFile } from '../utils';
+
   // Función para hacer toggle del dark mode
   function toggleDarkMode() {
     const html = document.documentElement;
@@ -24,10 +20,15 @@ import ButtonIcon from './ButtonIcon.astro';
     if (isDark) {
       html.classList.remove('dark');
       localStorage.setItem('theme', 'light');
+      
     } else {
       html.classList.add('dark');
       localStorage.setItem('theme', 'dark');
+
     }
+
+     // Actualizar cv a descargar
+    updateCvFile();
   }
 
   // Agregar event listener al botón
