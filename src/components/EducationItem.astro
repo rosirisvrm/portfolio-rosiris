@@ -1,6 +1,6 @@
 ---
 import CapIcon from '@/components/icons/CapIcon.astro'
-import type { Education } from '@/data'
+import type { Education } from '@/types'
 
 type Props = {
     item: Education,
@@ -10,7 +10,7 @@ type Props = {
 
 <div class="flex flex-col md:flex-row gap-x-4 border 
     border-secondary-500 dark:border-primary-500 
-    rounded-xl p-4 md:py-3 hover:scale-105 transition">
+    rounded-xl p-4 md:py-3 hover:scale-105 transition shadow-sm">
 
     <div class="flex flex-col w-full md:w-1/5 justify-center items-center mb-4 md:mb-0">
          <CapIcon class='size-10 text-secondary-500 dark:text-white' />
