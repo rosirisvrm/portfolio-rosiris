@@ -4,11 +4,9 @@ interface Props{
   href?: string;
   target?: string; 
   class?: string;
-  download?: string;
 }
 ---
 <a 
-   {...Astro.props}
    id={Astro.props.id}
    href={Astro.props.href} 
    target={Astro.props.target || null}
