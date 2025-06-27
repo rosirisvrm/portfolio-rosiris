@@ -1,10 +1,16 @@
- <div class="flex py-2 px-4 gap-x-2 justify-center items-center 
-    bg-transparent hover:bg-pink-50 
-    border-secondary-400 text-secondary-400
-    dark:bg-withe/5 dark:border-white/10 dark:text-white
+---
+interface Props{
+  lightStyles?: string;
+}
+---
+ 
+ <div class=`
+    flex py-2 px-4 gap-x-2 justify-center items-center 
+    ${Astro.props.lightStyles || 'bg-transparent hover:bg-pink-50 border-secondary-500 text-secondary-500'}
+    dark:bg-white/5 dark:border-white/10 dark:text-white
     dark:hover:bg-white/2 dark:hover:border-primary-500 dark:hover:text-primary-500
     hover:scale-105 transition
     rounded-full border sm:text-sm text-xs
-">
+`>
     <slot />
 </div>

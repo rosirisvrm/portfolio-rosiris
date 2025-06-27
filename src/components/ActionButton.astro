@@ -4,17 +4,22 @@ interface Props{
   href?: string;
   target?: string; 
   class?: string;
+  widthStyles?: string;
+  lightStyles?: string;
 }
 ---
 <a 
    id={Astro.props.id}
    href={Astro.props.href} 
    target={Astro.props.target || null}
-   class={`${Astro.props.class || 'w-48'}
-    bg-pink-500 dark:bg-primary-500 
-    sm:py-3 sm:px-8 py-2.5 px-4
-  text-white dark:text-white text-xs font-normal sm:text-sm sm:font-medium
-    rounded-md cursor-pointer hover:scale-105 transition gap-x-1
+   class={`
+    ${Astro.props.widthStyles || 'w-48'}
+    ${Astro.props.lightStyles || 'bg-secondary-500 text-white'}
+  dark:bg-primary-500 
+  dark:text-white 
+    text-xs font-normal sm:text-sm sm:font-medium
+    sm:py-3 sm:px-8 py-2.5 px-4 gap-x-1
+    rounded-md cursor-pointer hover:scale-105 transition 
     flex items-center flex-row justify-center
 `}>
 	<slot />

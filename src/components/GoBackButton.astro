@@ -1,0 +1,12 @@
+---
+import BackIcon from './icons/BackIcon.astro';
+
+type Props = {
+    href: string;
+}
+
+---
+
+<a href={Astro.props.href} class="text-black/60 dark:text-white cursor-pointer">
+    <BackIcon class='size-5 sm:size-8 transition hover:scale-110' />
+</a>
