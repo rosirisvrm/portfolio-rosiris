@@ -8,23 +8,28 @@ type Props = {
 
 ---
 
-<div class="flex flex-col md:flex-row gap-x-4 border border-primary-500 rounded-xl p-4 md:py-3 hover:scale-105 transition">
+<div class="flex flex-col md:flex-row gap-x-4 border 
+    border-secondary-500 dark:border-primary-500 
+    rounded-xl p-4 md:py-3 hover:scale-105 transition">
 
     <div class="flex flex-col w-full md:w-1/5 justify-center items-center mb-4 md:mb-0">
-         <CapIcon class='size-10' />
+         <CapIcon class='size-10 text-secondary-500 dark:text-white' />
     </div>
 
     <div class="flex flex-col md:flex-row w-full md:w-4/5">
         <div class="flex flex-col justify-center items-center md:items-start w-full md:w-1/2 mb-4 md:mb-0">
-            <h5 class="font-bold">
+            <h5 class="font-bold text-black/60 dark:text-white">
                 {Astro.props.item.degree}
             </h5>
-            <h6 class="text-center md:text-start italic">
+            <h6 class="text-center md:text-start italic text-black/60 dark:text-white">
                 {Astro.props.item.institute}
             </h6>
         </div>
 
-        <div class="flex flex-col justify-center items-center md:items-end text-gray-400 text-sm font-normal leading-none w-full md:w-1/2">
+        <div class="flex flex-col justify-center items-center md:items-end 
+          text-gray-500 dark:text-gray-400
+            text-sm font-normal leading-none w-full md:w-1/2
+        ">
             <time>
                 {Astro.props.item.time}
             </time>

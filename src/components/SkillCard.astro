@@ -9,12 +9,13 @@ const Icon = Astro.props.icon
 
 <div class="
     flex-1
-    rounded-xl bg-primary-500 
+    rounded-xl 
+    bg-secondary-400 dark:bg-primary-500 
     pr-5 pb-5 pl-5 pt-10 
     flex flex-col
     hover:scale-105 transition
 ">
-    <Icon class="sm:size-10 size-6 mb-3" />
+    <Icon class="sm:size-10 size-6 mb-3 text-white" />
     <h6 class="uppercase text-white font-bold sm:text-lg text-base mb-1">{Astro.props.title || ''}</h6>
     <p class="text-white sm:text-base text-sm">{Astro.props.description || ''}</p>
 </div>
