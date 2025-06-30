@@ -33,27 +33,27 @@ export const sections: Section[] = [
   },
   {
     id: "about",
-    title: "Sobre mí",
+    title: "About me",
     href: "#about"
   },
   {
     id: "experience",
-    title: "Experiencia",
+    title: "Experience",
     href: "#experience"
   },
   {
     id: "education",
-    title: "Educación",
+    title: "Education",
     href: "#education"
   },
   {
     id: "mainSkills",
-    title: "Habilidades",
+    title: "Skills",
     href: "#mainSkills"
   },
   {
     id: "projects",
-    title: "Proyectos",
+    title: "Projects",
     href: "#projects"
   }
 ]
@@ -116,28 +116,33 @@ export const mainSkills: MainSkill[] = [
   {
     id: "webApps",
     icon: CodeIcon,
-    title: "Desarrollo de aplicaciones web",
-    description: "Diseño y desarrollo de interfaces dinámicas y escalables utilizando frameworks modernos como React y Next.js, con enfoque en rendimiento, accesibilidad y experiencia de usuario."
+    title: "Web Application Development",
+    description:
+      "Design and development of dynamic, scalable interfaces using modern frameworks such as React and Next.js, with a focus on performance, accessibility, and user experience."
   },
   {
     id: "staticSites",
     icon: WebsiteIcon,
-    title: "Desarrollo de sitios web estáticos",
-    description: "Construcción de sitios rápidos y optimizados para SEO con tecnologías como Astro y HTML/CSS, priorizando tiempos de carga bajos y una estructura fácilmente mantenible."
+    title: "Static Website Development",
+    description:
+      "Building fast, SEO-optimized websites with technologies like Astro and HTML/CSS, prioritizing low load times and a maintainable structure."
   },
   {
     id: "responsiveDesign",
     icon: ResponsiveIcon,
-    title: "Desarrollo responsive",
-    description: "Implementación de diseños adaptables que aseguran una experiencia fluida en dispositivos móviles, tablets y escritorios usando Tailwind CSS y técnicas modernas de layout."
+    title: "Responsive Design",
+    description:
+      "Implementation of adaptable layouts that ensure a seamless experience on mobile devices, tablets, and desktops using Tailwind CSS and modern layout techniques."
   },
   {
     id: "apiConsumption",
     icon: ApiIcon,
-    title: "Consumo de APIs",
-    description: "Integración eficiente de APIs REST y GraphQL para conectar interfaces con datos en tiempo real, aplicando buenas prácticas de manejo de estado y asincronía."
+    title: "API Integration",
+    description:
+      "Efficient integration of REST and GraphQL APIs to connect interfaces with real-time data, applying best practices for state management and asynchronous operations."
   }
-]
+];
+
 
 export const technologies: Technology[] = [
   { id: "html", name: "HTML", icon: HtmlIcon },
@@ -168,8 +173,12 @@ export const projects: Project[] = [
     {
         id: 'condominium-administrator-web-app',
         title: 'Condominium Administrator Web App',
-        resume: 'Aplicación web para la gestión de condominios implementada con React.js.',
-        description: 'Aplicación web para la gestión de condominios implementada con React.js. Se trata de una aplicación con módulos para gestionar las diferentes tareas y roles involucrados en un condominio. La aplicación fue desarrollada con React, se utilizó Material UI como librería de UI, React Router para la navegación y manejo de rutas, React Hook Form para el manejo de formularios y Redux para el manejo del estado global de la aplicación. La aplicación aún no cuenta con integraciones con backend, por ello se utilizó fake data solo para efectos de visualización del producto, esta fue generada con Faker.js.',
+        resume: `Web application for condominium management implemented with React.js.`,
+        description: `This is a modular web application designed to manage various tasks and roles within a condominium. 
+          It was part of the system I developed for my undergraduate thesis to earn my degree in Computer Engineering. 
+          The application was built using React.js, incorporating Material UI as the component library, 
+          React Router for navigation and routing, React Hook Form for form handling, and Redux for managing global state. 
+          Faker.js was used to generate mock data during development.`,
         imgUrl: 'project_0',
         repoUrl: 'https://github.com/rosirisvrm/condominium-administrator',
         demoUrl: 'https://rosirisvrm.github.io/condominium-administrator/#/dashboard/home',
@@ -178,8 +187,13 @@ export const projects: Project[] = [
     {
         id: 'todo-machine',
         title: 'TODO Machine',
-        resume: 'Aplicación para manejo de TODOs desarrollada con React.js enfocada en su core sin el uso de librerías externas.',
-        description: 'Aplicación para manejo de TODOs desarrollada con React.js enfocada en su core sin el uso de librerías externas. En este aplicación el objetivo fue utilizar la API de React, sin ayuda de más herramientas para lograr las funcionalidades y comportamiento deseado para visualizar una lista de TODOs así como crear, editar, completar y eliminar TODOs. Se trata de una aplicación simple, de una sola ruta, en donde los estilos fueron aplicados con css y el manejo de datos se hizo utilizando local storage En esta aplicación se implementan conceptos de React como estados, composición de componentes, statefull y staless components, custom hooks, React Context y reducers.',
+        resume: `TODO management application developed with React.js, focused on its core functionality without the use of external libraries`,
+        description: `TODO management application developed with React.js, focused on its core functionality without the use of external libraries. 
+          The goal of this project was to utilize the native React API to implement the desired features 
+          and behaviors—such as viewing, creating, editing, completing, and deleting TODO items—without third-party dependencies. 
+          It’s a simple, single-route application. Styles were applied using CSS, and data persistence was handled through local storage. 
+          This project demonstrates key React concepts including state, hooks, component composition, stateful and stateless components, 
+          custom hooks, React Context, and reducers.`,
         imgUrl: 'project_1',
         repoUrl: 'https://github.com/rosirisvrm/todo-machine',
         demoUrl: 'https://rosirisvrm.github.io/todo-machine/',
@@ -188,8 +202,8 @@ export const projects: Project[] = [
     {
         id: 'uw-landing-page',
         title: 'UW Landing Page',
-        resume: 'Se trata de una landing page de una red social dirigida a al estilo de vida fitness. Fue desarrollado en React.js con uso de la librería Material UI.',
-        description: 'Se trata de una landing page de una red social dirigida a al estilo de vida fitness. Fue desarrollado en React.js con uso de la librería Material UI.',
+        resume: `This is a landing page for a social network focused on the fitness lifestyle. It was developed using React.js with the Material UI library.`,
+        description: `This is a landing page for a social network focused on the fitness lifestyle. It was developed using React.js with the Material UI library.`,
         imgUrl: 'project_2',
         repoUrl: 'https://github.com/rosirisvrm/unitewellness-landing',
         demoUrl: 'https://rosirisvrm.github.io/unitewellness-landing/',
@@ -198,8 +212,8 @@ export const projects: Project[] = [
     {
         id: 'company-landing-page',
         title: 'Company Landing Page',
-        resume: 'Es una landing page de una compañía fake. Fue desarrollada usando Next.js en su versión 14. Para los estilos y como librería de UI se utilizó Material UI.',
-        description: 'Es una landing page de una compañía fake. Fue desarrollada usando Next.js en su versión 14. Para los estilos y como librería de UI se utilizó Material UI.',
+        resume: `This is a landing page for a fictional company. It was developed using Next.js version 14, with Material UI as the UI library.`,
+        description: `This is a landing page for a fictional company. It was developed using Next.js version 14, with Material UI as the UI library.`,
         imgUrl: 'project_3',
         repoUrl: 'https://github.com/rosirisvrm/company-landing-page',
         demoUrl: 'https://rosirisvrm-company-landing-page.netlify.app/',
@@ -208,8 +222,11 @@ export const projects: Project[] = [
     {
         id: 'condominium-administrator-landing-Page',
         title: 'Condominium Administrator Landing Page',
-        resume: 'Es una landing page de una aplicación web para gestión de condominios. Fue desarrollada utilizando HTML, CSS nativos y JS vanilla.',
-        description: 'Es una landing page de una aplicación web para gestión de condominios. Fue desarrollada utilizando HTML, CSS nativos y JS vanilla. Adicionalmente para estilizar el sitio y para dar forma a los layouts de las distintas secciones se adicionó Bootstrap. En una de las secciones del sitio se está consumiendo una REST API de ejemplo (en este caso la de Rick And Morty https://rickandmortyapi.com/) y se están mostrando los datos de una manera bonita e interactiva, esto con la finalidad de mostrar como se puede recuperar y mostrar datos provenientes de una API en este tipo de sitios estáticos.',
+        resume: `Landing page for Condominium Administrator, a web application for condominium management. Built with semantic HTML, 
+          handcrafted CSS, and vanilla JavaScript to ensure lean performance and full control over the UI.`,
+        description: `This is a landing page for Condominium Administrator, a web application for condominium management. Built with semantic HTML, 
+          handcrafted CSS, and vanilla JavaScript to ensure lean performance and full control over the UI. Additionally, Bootstrap was used to style the site. In one of the sections, 
+        a REST API is consumed and the data is presented in a visually appealing and interactive way.`,
         imgUrl: 'project_4',
         repoUrl: 'https://github.com/rosirisvrm/ca-landing-page',
         demoUrl: 'https://ca-lading-page.netlify.app/',
@@ -218,8 +235,11 @@ export const projects: Project[] = [
     {
         id: 'english-academy-landing-page',
         title: 'English Academy Landing Page',
-        resume: 'Se trata de una landing page de una academia de inglés fake. Está desarrollada usando Gulp y Twig. Esta landing fue estilizada usando Bootstrap y Sass.',
-        description: 'Se trata de una landing page de una academia de inglés fake. Está desarrollada usando Gulp y Twig, herramientas útiles para el desarrollo de sitios web estáticos, que facilitan el manejo y generación de HTML. Está aplicación cuenta con varias páginas y para manejar la navegación entre ellas se agregó un script sencillo de JavaScript en donde se manipula el DOM una vez el contenido es cargado para cambiar estilos puntuales en el header.  A la vez se agregó otro script en donde se consume una API pública que provee data fake, de la cual se están consumiendo los usuarios que se muestran en la página Nosotros. Esta landing fue estilizada usando Bootstrap y Sass.',
+        resume: `Landing page for a fictional English academy, developed with Gulp and Twig. Styled using Bootstrap and Sass to ensure a clean, 
+        responsive design aligned with educational branding.`,
+        description: `This is a landing page for a fictional English academy. It was developed using Gulp and Twig. The application includes multiple pages, 
+        and a JavaScript script was added to handle navigation between them. Additionally, another script consumes a public API that provides mock data. 
+        The website was styled using Bootstrap and Sass to ensure a clean, responsive design aligned with educational branding.`,
         imgUrl: 'project_5',
         repoUrl: 'https://github.com/rosirisvrm/english-academy-landing-page',
         demoUrl: 'https://english-academy-landing-page.netlify.app/',

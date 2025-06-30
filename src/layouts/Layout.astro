@@ -1,6 +1,7 @@
 ---
 import '@/styles/global.css';
 import '@fontsource-variable/dm-sans';
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -11,7 +12,8 @@ import '@fontsource-variable/dm-sans';
 		<link rel="icon" type="image/svg+xml" href="/girl.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Rosiris Romero | Frontend Developer</title>
-		 <script is:inline>
+		<ClientRouter />
+		<script is:inline>
 			(function() {	
 				function initializeDarkMode() {
 					const savedTheme = localStorage.getItem('theme');

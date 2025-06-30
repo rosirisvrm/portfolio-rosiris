@@ -1,5 +1,5 @@
 ---
-import type { Project } from "@/data"
+import type { Project } from "@/types"
 import ActionButton from "@/components/ActionButton.astro"
 import SearchIcon from "@/components/icons/SearchIcon.astro"
 
@@ -9,23 +9,30 @@ interface Props{
 
 const { project: { id, title, resume, imgUrl } } = Astro.props;
 
+// To astro view transition in project image
+// transition:name={`project-${id}`}
 ---
 
 <div class="flex flex-col bg-secondary-400 dark:bg-primary-800 
-    p-5 rounded-2xl gap-y-3 mb-4 shadow-lg
+    p-5 rounded-2xl gap-y-3 mb-4 shadow-lg justify-between
     xl:w-[360px] lg:w-[330px] md:w-[290px] w-[300px] 
 ">
-    <img src={`/${imgUrl}.png`} class="w-full h-32 md:h-48 rounded-xl" />
-    <h5 class="capitalize font-bold text-lg text-white">
-        {title}
-    </h5>
-    <p class="mb-5 text-sm text-white">
-        {resume}
-    </p>
+    <div class="flex flex-col">
+        <img 
+            src={`/${imgUrl}.png`} 
+            class="w-full h-32 md:h-48 rounded-xl mb-4"
+        />
+        <h5 class="capitalize font-bold text-lg text-white mb-2">
+            {title}
+        </h5>
+        <p class="mb-5 text-sm text-white">
+            {resume}
+        </p>
+    </div>
     <div class="flex mx-auto">
         <ActionButton href={`/project/${id}`} lightStyles="bg-pink-50 text-black/60 hover:text-secondary-500">
             <SearchIcon class="sm:size-4 size-3" />
-            Ver detalles
+            View detail
         </ActionButton>
     </div>
 </div>
