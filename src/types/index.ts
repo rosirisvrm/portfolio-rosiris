@@ -29,6 +29,7 @@ export type Project = {
     repoUrl: string;
     demoUrl: string;
     technologies: string[] | [];
+    features?: string[] | [];
 };
 
 export type Education = {

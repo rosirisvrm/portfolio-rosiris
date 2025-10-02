@@ -61,18 +61,29 @@ export const sections: Section[] = [
 export const experience: Experience[] = [
   {
     id: 0,
+    time: "07/2025 - 10/2025",
+    role: "Frontend Developer",
+    company: "Freelance",
+    type: "Remote",
+    description: `Migrated a legacy Angular app with technical debt for a food store and order management system. Involves team development of new app in Angular 20 with Clean Architecture, including: 
+      UI redesign and UX improvements. 
+      Modular interface development. 
+      Integration with existing REST API.`
+  },
+  {
+    id: 1,
     time: "04/2025 - 05/2025",
     role: "Frontend Mobile Developer",
     company: "Freelance",
-    type: "Remoto",
-    description: "I developed interfaces for a mobile application using React Native, meticulously following the UX/UI design in Figma and consuming a REST API to ensure the proper rendering of data in the application."
+    type: "Remote",
+    description: `I developed interfaces for a mobile application using React Native, meticulously following the UX/UI design in Figma and consuming a REST API to ensure the proper rendering of data in the application.`
   },
   {
     id: 1,
     time: "12/2023 – 12/2024",
     role: "Frontend Developer",
     company: "Nolatech",
-    type: "Remoto",
+    type: "Remote",
     description: "I participated in the development of an ongoing web chat platform made in React.js adding new features. I led the frontend development of an administrative and tracking web application using Next.js and connecting a GraphQL API. I collaborated in the design and development of a bug tracking application (Next.js)."
   },
   {
@@ -80,7 +91,7 @@ export const experience: Experience[] = [
     time: "12/2022 – 03/2023",
     role: "Frontend Developer",
     company: "Portl",
-    type: "Remoto",
+    type: "Remote",
     description: "Implemented UI/UX improvements in a web platform for content creators in production, developed with Next.js. I increased the scope of the application by developing new features and interfaces. I optimized the project's code by fixing bugs and performing refactoring."
   },
   {
@@ -88,7 +99,7 @@ export const experience: Experience[] = [
     time: "02/2021 – 01/2022",
     role: "Frontend Developer",
     company: "Smartbunny",
-    type: "Remoto",
+    type: "Remote",
     description: "I participated in the expansion of an ongoing web project creating new interfaces with React.js. I contributed in the development of the web version of a social network with Next.js, making the UI and integrating serverless connections. I collaborated in the construction of an administrative system in Angular developing the UI and integrating a REST API. I developed landing pages and websites using HTML, CSS and Bootstrap."
   },
   {
@@ -97,19 +108,22 @@ export const experience: Experience[] = [
     role: "Junior Developer",
     company: "LCC Opentech",
     type: "Hybrid",
-    description: "I cooperated in the development of a web application with React.js for industrial process control performing the following tasks: I built the UI following designs. I integrated a REST API to consume and manage data. I connected data in real time."
+    description: `I cooperated in the development of a web application with React.js for industrial process control performing the following tasks: 
+      I built the UI following designs. 
+      I integrated a REST API to consume and manage data. 
+      I connected data in real time.`
   }
 ]
 
 export const education: Education[] = [
-    {
-        id: 'computer-engineering',
-        time: '2015 - 2023',
-        degree: 'Computer Engineering',
-        institute: 'Universidad Nacional Experimental de Guayana',
-        city: 'Puerto Ordaz',
-        country: 'Venezuela',
-    }
+  {
+    id: 'computer-engineering',
+    time: '2015 - 2023',
+    degree: 'Computer Engineering',
+    institute: 'Universidad Nacional Experimental de Guayana',
+    city: 'Puerto Ordaz',
+    country: 'Venezuela',
+  }
 ];
 
 export const mainSkills: MainSkill[] = [
@@ -226,7 +240,7 @@ export const projects: Project[] = [
           handcrafted CSS, and vanilla JavaScript to ensure lean performance and full control over the UI.`,
         description: `This is a landing page for Condominium Administrator, a web application for condominium management. Built with semantic HTML, 
           handcrafted CSS, and vanilla JavaScript to ensure lean performance and full control over the UI. Additionally, Bootstrap was used to style the site. In one of the sections, 
-        a REST API is consumed and the data is presented in a visually appealing and interactive way.`,
+          a REST API is consumed and the data is presented in a visually appealing and interactive way.`,
         imgUrl: 'project_4',
         repoUrl: 'https://github.com/rosirisvrm/ca-landing-page',
         demoUrl: 'https://ca-lading-page.netlify.app/',
@@ -236,13 +250,48 @@ export const projects: Project[] = [
         id: 'english-academy-landing-page',
         title: 'English Academy Landing Page',
         resume: `Landing page for a fictional English academy, developed with Gulp and Twig. Styled using Bootstrap and Sass to ensure a clean, 
-        responsive design aligned with educational branding.`,
+          responsive design aligned with educational branding.`,
         description: `This is a landing page for a fictional English academy. It was developed using Gulp and Twig. The application includes multiple pages, 
-        and a JavaScript script was added to handle navigation between them. Additionally, another script consumes a public API that provides mock data. 
-        The website was styled using Bootstrap and Sass to ensure a clean, responsive design aligned with educational branding.`,
+          and a JavaScript script was added to handle navigation between them. Additionally, another script consumes a public API that provides mock data. 
+          The website was styled using Bootstrap and Sass to ensure a clean, responsive design aligned with educational branding.`,
         imgUrl: 'project_5',
         repoUrl: 'https://github.com/rosirisvrm/english-academy-landing-page',
         demoUrl: 'https://english-academy-landing-page.netlify.app/',
         technologies: ['html', 'css', 'javaScript', 'sass', 'bootstrap', 'twig', 'gulp']
     },
+    {
+      id: 'digital-herbarium',
+      title: 'Digital herbarium',
+      resume: `Interactive academic digital herbarium developed using Astro, TypeScript, and Tailwind CSS.`,
+      description: `Interactive academic digital herbarium designed for the exploration and study of plant species, developed using Astro, TypeScript, and Tailwind CSS, aimed at delivering a fast, accessible, and visually engaging web experience to support botanical learning.`,
+      imgUrl: 'project_6',
+      repoUrl: 'https://github.com/rosirisvrm/plants-catalog',
+      demoUrl: 'https://plants-catalog.vercel.app/',
+      technologies: ['html', 'typeScript', 'astro', 'tailwindCss']
+  },
+  {
+    id: 'venerica',
+    title: 'Venerica',
+    resume: `Development of a modern web solution in Angular 20 to optimize the operational management of a food store.`,
+    description: `Complete restructuring and replacement of a previous application with high levels of technical debt, implementing Clean Architecture patterns to improve the quality and evolution of the code. Collaborative development to create:`,
+    features: [
+      'Adaptive, modular and reusable component-oriented interface.',
+      'Improved user experience with refreshed UI design and intuitive functionality.',
+      'Robust connectivity with existing REST APIs, ensuring integrity and fluidity in data handling.',
+    ],
+    imgUrl: 'project_7',
+    repoUrl: '',
+    demoUrl: '',
+    technologies: ['angular', 'typeScript', 'cleanArchitecture', 'restApi', 'angularMaterial', 'tailwindCss']
+  },
+  // {
+  //   id: 'comedy-club-ticket-generator',
+  //   title: 'Comedy Club Ticket Generator',
+  //   resume: ``,
+  //   description: ``,
+  //   imgUrl: '',
+  //   repoUrl: 'https://github.com/rosirisvrm/comedy-club-ticket-generator',
+  //   demoUrl: 'https://tickets-sales-site.vercel.app/',
+  //   technologies: ['reactJs', 'typeScript', 'localStorage', 'tailwindCss', 'reactHookForm', 'reactContextApi', 'reactTestingLibrary']
+  // },
 ];
