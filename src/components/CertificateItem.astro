@@ -1,0 +1,33 @@
+---
+import type { Certificate } from "@/types"
+// import LinkIcon from "./icons/LinkIcon.astro";
+
+interface Props{
+    certificate: Certificate;
+}
+
+const { certificate: { id, title, link, institute, year, imageUrl } } = Astro.props;
+
+---
+
+<div class="flex flex-col md:flex-row py-4 gap-3 md:gap-2 mb-4 w-full border-b-1 border-b-secondary-500 dark:border-b-primary-800">
+    <div class="flex flex-row md:w-1/6 justify-center md:justify-start">
+        <img src={imageUrl} alt={title} class="w-32 h-20 rounded" />
+    </div>
+    <div class="flex flex-row md:w-3/6 justify-center sm:justify-start ml-0 sm:ml-8 xl:ml-0">
+        <h6 class="capitalize text-base font-semibold dark:font-normal text-black/60 dark:text-white text-center md:text-left">
+            {title}
+        </h6>
+    </div>
+    <div class="flex flex-row md:w-1/6 justify-center md:justify-start sm:ml-8">
+        <small class="text-xs font-semibold dark:font-normal text-black/60 dark:text-white">
+            {institute}, {year}
+        </small>
+    </div>
+    <div class="flex flex-row md:w-1/6 justify-center md:justify-end">
+        <a href={link} target="_blank" class="text-xs font-semibold dark:font-normal text-black/60 dark:text-white underline hover:scale-105 transition cursor-pointer">
+            View certificate
+        </a>
+        <!-- <LinkIcon class="size-5" /> -->
+    </div>
+</div>

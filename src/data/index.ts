@@ -23,7 +23,7 @@ import ResponsiveIcon from "@/components/icons/ResponsiveIcon.astro";
 import WebsiteIcon from "@/components/icons/WebsiteIcon.astro";
 import CodeIcon from '@/components/icons/CodeIcon.astro';
 import ApiIcon from "@/components/icons/ApiIcon.astro";
-import type { Section, Experience, Education, MainSkill, Technology, Project } from '@/types';
+import type { Section, Experience, Education, MainSkill, Technology, Project, Certificate } from '@/types';
 
 export const sections: Section[] = [
   {
@@ -157,7 +157,6 @@ export const mainSkills: MainSkill[] = [
   }
 ];
 
-
 export const technologies: Technology[] = [
   { id: "html", name: "HTML", icon: HtmlIcon },
   { id: "css", name: "CSS", icon: CssIcon },
@@ -183,6 +182,65 @@ export const technologies: Technology[] = [
   { id: "scrum", name: "Scrum", icon: ScrumIcon }
 ]
 
+export const certificates: Certificate[] = [
+  {
+    id: "javascript-frameworks-libraries",
+    title: "JavaScript Frameworks and Libraries Course",
+    imageUrl: "/certificate_1.png",
+    link: "https://platzi.com/p/rosirisvrm/curso/2239-frameworks-javascript/diploma/detalle/",
+    institute: "Platzi",
+    year: "2023"
+  },
+  {
+    id: "react-introduction",
+    title: "Introduction to React.js Course",
+    imageUrl: "/certificate_2.png",
+    link: "https://platzi.com/p/rosirisvrm/curso/2444-react-17/diploma/detalle/",
+    institute: "Platzi",
+    year: "2023"
+  },
+  {
+    id: "react-render-patterns",
+    title: "React.js: Render and Compositing Patterns Course",
+    imageUrl: "/certificate_3.png",
+    link: "https://platzi.com/p/rosirisvrm/curso/2457-react-patrones-render/diploma/detalle/",
+    institute: "Platzi",
+    year: "2023"
+  },
+  {
+    id: "react-state-management",
+    title: "React.js: Professional State Management Course",
+    imageUrl: "/certificate_4.png",
+    link: "https://platzi.com/p/rosirisvrm/curso/2597-react-estado/diploma/detalle/",
+    institute: "Platzi",
+    year: "2023"
+  },
+  {
+    id: "react-redux",
+    title: "React.js and Redux Professional Course",
+    imageUrl: "/certificate_5.png",
+    link: "https://platzi.com/p/rosirisvrm/curso/3219-react-redux-profesional/diploma/detalle/",
+    institute: "Platzi",
+    year: "2023"
+  },
+  {
+    id: "efset-b1",
+    title: "EF SET English Certificate 45/100 (B1 Intermediate)",
+    imageUrl: "/certificate_6.png",
+    link: "https://cert.efset.org/JvnVPJ",
+    institute: "EF SET",
+    year: "2023"
+  },
+  {
+    id: "vit-explorer",
+    title: "Venezuelans in Tech English Conversational Club (Explorer Level)",
+    imageUrl: "/certificate_7.png",
+    link: "https://venezuelansintech.org/club",
+    institute: "Venezolanas in Tech",
+    year: "2025"
+  }
+];
+
 export const projects: Project[] = [
     {
         id: 'condominium-administrator-web-app',
@@ -197,6 +255,7 @@ export const projects: Project[] = [
         repoUrl: 'https://github.com/rosirisvrm/condominium-administrator',
         demoUrl: 'https://rosirisvrm.github.io/condominium-administrator/#/dashboard/home',
         technologies: ['reactJs', 'redux', 'materialUi', 'reactHookForm', 'reactRouter'],
+        status: 'regular',
     },
     {
         id: 'todo-machine',
@@ -211,7 +270,8 @@ export const projects: Project[] = [
         imgUrl: 'project_1',
         repoUrl: 'https://github.com/rosirisvrm/todo-machine',
         demoUrl: 'https://rosirisvrm.github.io/todo-machine/',
-        technologies: ['reactJs', 'css', 'contextApi', 'reactHooks', 'reactRouter', 'customHooks', 'localStorage']
+        technologies: ['reactJs', 'css', 'contextApi', 'reactHooks', 'reactRouter', 'customHooks', 'localStorage'],
+        status: 'regular',
     },
     {
         id: 'uw-landing-page',
@@ -221,7 +281,8 @@ export const projects: Project[] = [
         imgUrl: 'project_2',
         repoUrl: 'https://github.com/rosirisvrm/unitewellness-landing',
         demoUrl: 'https://rosirisvrm.github.io/unitewellness-landing/',
-        technologies: ['reactJs', 'materialUi']
+        technologies: ['reactJs', 'materialUi'],
+        status: 'regular',
     },
     {
         id: 'company-landing-page',
@@ -231,7 +292,8 @@ export const projects: Project[] = [
         imgUrl: 'project_3',
         repoUrl: 'https://github.com/rosirisvrm/company-landing-page',
         demoUrl: 'https://rosirisvrm-company-landing-page.netlify.app/',
-        technologies: ['reactJs', 'nextJs', 'materialUi']
+        technologies: ['reactJs', 'nextJs', 'materialUi'],
+        status: 'regular',
     },
     {
         id: 'condominium-administrator-landing-Page',
@@ -244,7 +306,8 @@ export const projects: Project[] = [
         imgUrl: 'project_4',
         repoUrl: 'https://github.com/rosirisvrm/ca-landing-page',
         demoUrl: 'https://ca-lading-page.netlify.app/',
-        technologies: ['html', 'css', 'javaScript', 'bootstrap']
+        technologies: ['html', 'css', 'javaScript', 'bootstrap'],
+        status: 'regular',
     },
     {
         id: 'english-academy-landing-page',
@@ -257,7 +320,8 @@ export const projects: Project[] = [
         imgUrl: 'project_5',
         repoUrl: 'https://github.com/rosirisvrm/english-academy-landing-page',
         demoUrl: 'https://english-academy-landing-page.netlify.app/',
-        technologies: ['html', 'css', 'javaScript', 'sass', 'bootstrap', 'twig', 'gulp']
+        technologies: ['html', 'css', 'javaScript', 'sass', 'bootstrap', 'twig', 'gulp'],
+        status: 'regular',
     },
     {
       id: 'digital-herbarium',
@@ -267,7 +331,8 @@ export const projects: Project[] = [
       imgUrl: 'project_6',
       repoUrl: 'https://github.com/rosirisvrm/plants-catalog',
       demoUrl: 'https://plants-catalog.vercel.app/',
-      technologies: ['html', 'typeScript', 'astro', 'tailwindCss']
+      technologies: ['html', 'typeScript', 'astro', 'tailwindCss'],
+      status: 'new',
   },
   {
     id: 'venerica',
@@ -282,16 +347,18 @@ export const projects: Project[] = [
     imgUrl: 'project_7',
     repoUrl: '',
     demoUrl: '',
-    technologies: ['angular', 'typeScript', 'cleanArchitecture', 'restApi', 'angularMaterial', 'tailwindCss']
+    technologies: ['angular', 'typeScript', 'cleanArchitecture', 'restApi', 'angularMaterial', 'tailwindCss'],
+    status: 'new',
   },
-  // {
-  //   id: 'comedy-club-ticket-generator',
-  //   title: 'Comedy Club Ticket Generator',
-  //   resume: ``,
-  //   description: ``,
-  //   imgUrl: '',
-  //   repoUrl: 'https://github.com/rosirisvrm/comedy-club-ticket-generator',
-  //   demoUrl: 'https://tickets-sales-site.vercel.app/',
-  //   technologies: ['reactJs', 'typeScript', 'localStorage', 'tailwindCss', 'reactHookForm', 'reactContextApi', 'reactTestingLibrary']
-  // },
+  {
+    id: 'comedy-club-ticket-generator',
+    title: 'Comedy Club Ticket Generator',
+    resume: ``,
+    description: ``,
+    imgUrl: '',
+    repoUrl: 'https://github.com/rosirisvrm/comedy-club-ticket-generator',
+    demoUrl: 'https://tickets-sales-site.vercel.app/',
+    technologies: ['reactJs', 'typeScript', 'localStorage', 'tailwindCss', 'reactHookForm', 'reactContextApi', 'reactTestingLibrary'],
+    status: 'coming soon',
+  },
 ];

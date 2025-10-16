@@ -30,6 +30,7 @@ export type Project = {
     demoUrl: string;
     technologies: string[] | [];
     features?: string[] | [];
+    status?: 'regular' | 'new' | 'coming soon';
 };
 
 export type Education = {
@@ -45,4 +46,13 @@ export type Technology = {
     id: string;
     name: string;
     icon: any;
+}
+
+export type Certificate = {
+  id: string;
+  title: string;
+  imageUrl: string;
+  link: string;
+  institute: string;
+  year: string;
 }
