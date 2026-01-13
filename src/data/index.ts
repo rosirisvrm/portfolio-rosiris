@@ -59,8 +59,19 @@ export const sections: Section[] = [
 ]
 
 export const experience: Experience[] = [
-  {
+    {
     id: 0,
+    time: "11/2025 - 01/2026",
+    role: "Frontend Developer",
+    company: "Brightcomms",
+    type: "Remote",
+    description: `I collaborated in the development of a web-based SaaS solution for monitoring telecommunications installations. My tasks were the following:
+    Development of new screens according to designs in Figma and add new modules and features, integrating screens with a REST API.
+    Correction of bugs and errors in already developed sections.
+    Teamwork in direct communication with the different parts of a multidisciplinary team.`
+  },
+  {
+    id: 1,
     time: "07/2025 - 10/2025",
     role: "Frontend Developer",
     company: "Freelance",
@@ -71,7 +82,7 @@ export const experience: Experience[] = [
       Integration with existing REST API.`
   },
   {
-    id: 1,
+    id: 2,
     time: "04/2025 - 05/2025",
     role: "Frontend Mobile Developer",
     company: "Freelance",
@@ -79,7 +90,7 @@ export const experience: Experience[] = [
     description: `I developed interfaces for a mobile application using React Native, meticulously following the UX/UI design in Figma and consuming a REST API to ensure the proper rendering of data in the application.`
   },
   {
-    id: 1,
+    id: 3,
     time: "12/2023 – 12/2024",
     role: "Frontend Developer",
     company: "Nolatech",
@@ -87,7 +98,7 @@ export const experience: Experience[] = [
     description: "I participated in the development of an ongoing web chat platform made in React.js adding new features. I led the frontend development of an administrative and tracking web application using Next.js and connecting a GraphQL API. I collaborated in the design and development of a bug tracking application (Next.js)."
   },
   {
-    id: 2,
+    id: 4,
     time: "12/2022 – 03/2023",
     role: "Frontend Developer",
     company: "Portl",
@@ -95,7 +106,7 @@ export const experience: Experience[] = [
     description: "Implemented UI/UX improvements in a web platform for content creators in production, developed with Next.js. I increased the scope of the application by developing new features and interfaces. I optimized the project's code by fixing bugs and performing refactoring."
   },
   {
-    id: 3,
+    id: 5,
     time: "02/2021 – 01/2022",
     role: "Frontend Developer",
     company: "Smartbunny",
@@ -103,7 +114,7 @@ export const experience: Experience[] = [
     description: "I participated in the expansion of an ongoing web project creating new interfaces with React.js. I contributed in the development of the web version of a social network with Next.js, making the UI and integrating serverless connections. I collaborated in the construction of an administrative system in Angular developing the UI and integrating a REST API. I developed landing pages and websites using HTML, CSS and Bootstrap."
   },
   {
-    id: 4,
+    id: 6,
     time: "01/2019 – 01/2021",
     role: "Junior Developer",
     company: "LCC Opentech",
@@ -332,7 +343,7 @@ export const projects: Project[] = [
       repoUrl: 'https://github.com/rosirisvrm/plants-catalog',
       demoUrl: 'https://plants-catalog.vercel.app/',
       technologies: ['html', 'typeScript', 'astro', 'tailwindCss'],
-      status: 'new',
+      status: 'regular',
   },
   {
     id: 'venerica',
@@ -348,17 +359,30 @@ export const projects: Project[] = [
     repoUrl: '',
     demoUrl: '',
     technologies: ['angular', 'typeScript', 'cleanArchitecture', 'restApi', 'angularMaterial', 'tailwindCss'],
-    status: 'new',
+    status: 'regular',
   },
   {
-    id: 'comedy-club-ticket-generator',
-    title: 'Comedy Club Ticket Generator',
-    resume: ``,
-    description: ``,
-    imgUrl: '',
-    repoUrl: 'https://github.com/rosirisvrm/comedy-club-ticket-generator',
-    demoUrl: 'https://tickets-sales-site.vercel.app/',
-    technologies: ['reactJs', 'typeScript', 'localStorage', 'tailwindCss', 'reactHookForm', 'reactContextApi', 'reactTestingLibrary'],
-    status: 'coming soon',
+    id: 'device-management',
+    title: 'Device Management Dashboard',
+    resume: `Interactive web application built with React, React Router, TypeScript, Material UI, Redux, and Axios. Designed for device management and monitoring.`,
+    description: `Interactive web application built with React, React Router, TypeScript, Material UI, Redux, and Axios. 
+    Designed for device management and monitoring, featuring status visualization, advanced search, and multimedia integration. Includes a module showcasing Rick and Morty characters with detailed information and optimized pagination. 
+    Focused on delivering a modern, responsive dashboard with reusable components and a modular architecture, resulting in a robust, maintainable, and user‑centered solution.`,
+    imgUrl: 'project_8',
+    repoUrl: 'https://github.com/rosirisvrm/device-management',
+    demoUrl: 'https://devices-management-dashboard.vercel.app/',
+    technologies: ['reactJs', 'typeScript', 'localStorage', 'redux', 'axios', 'reactRouter', 'materialUi'],
+    status: 'new',
   },
+  // {
+  //   id: 'comedy-club-ticket-generator',
+  //   title: 'Comedy Club Ticket Generator',
+  //   resume: ``,
+  //   description: ``,
+  //   imgUrl: 'project_9',
+  //   repoUrl: 'https://github.com/rosirisvrm/comedy-club-ticket-generator',
+  //   demoUrl: 'https://tickets-sales-site.vercel.app/',
+  //   technologies: ['reactJs', 'typeScript', 'localStorage', 'tailwindCss', 'reactHookForm', 'reactContextApi', 'reactTestingLibrary'],
+  //   status: 'coming soon',
+  // }
 ];
